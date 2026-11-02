@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dewveil Relic</title>
+<meta name="description" content="Dewveil Relic is a rhythm puzzle game for Android: weave dew veins, guide a firefly, ladybug and butterfly to their gem seats, and seal the crown sequence on the beat.">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+  :root {
+    --forest-deep: #0b1c14;
+    --forest-mid: #163226;
+    --panel: rgba(20, 34, 24, 0.9);
+    --gold: #d4a83e;
+    --gold-soft: #f3e2a8;
+    --cream: #fff4d2;
+    --text: #e3eadf;
+    --muted: #b9c9b6;
+    --amber-a: #c46a12;
+    --amber-b: #e8a23a;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--forest-deep);
+    background-image:
+      radial-gradient(ellipse at 50% -10%, rgba(212, 168, 62, 0.18), transparent 55%),
+      radial-gradient(ellipse at 10% 110%, rgba(46, 139, 87, 0.22), transparent 50%),
+      linear-gradient(180deg, var(--forest-mid), var(--forest-deep) 60%);
+    background-attachment: fixed;
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 16px 24px; }
+  header { text-align: center; padding: 16px 0 8px; }
+  .logo {
+    width: 128px; height: 128px; border-radius: 28px;
+    border: 2px solid var(--gold);
+    box-shadow: 0 0 40px rgba(230, 200, 90, 0.35);
+  }
+  h1 {
+    margin: 18px 0 4px;
+    color: var(--cream);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 7vw, 2.8rem);
+    letter-spacing: 0.02em;
+  }
+  .tagline { margin: 0; color: var(--gold-soft); font-size: 0.95rem; letter-spacing: 0.04em; }
+  h2 {
+    margin: 0 0 12px;
+    color: var(--cream);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+  }
+  .panel {
+    background: var(--panel);
+    border: 2px solid var(--gold);
+    border-radius: 18px;
+    padding: 22px 22px;
+    margin: 24px 0;
+  }
+  .panel p { margin: 0 0 12px; }
+  .panel p:last-child { margin-bottom: 0; }
+  ul { margin: 0; padding-left: 1.2em; }
+  li { margin: 0 0 8px; }
+  li:last-child { margin-bottom: 0; }
+  strong { color: var(--gold-soft); }
+  .cta { text-align: center; margin: 28px 0 8px; }
+  .play-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 999px;
+    background: linear-gradient(0deg, var(--amber-a), var(--amber-b));
+    border: 1.5px solid #f6e27a;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  }
+  .play-btn:hover, .play-btn:focus-visible { filter: brightness(1.08); }
+  .play-btn:focus-visible { outline: 3px solid var(--gold-soft); outline-offset: 3px; }
+  .modes { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 4px; }
+  .mode {
+    border: 1px solid rgba(212, 168, 62, 0.5);
+    border-radius: 12px;
+    padding: 12px 14px;
+    background: rgba(11, 28, 20, 0.6);
+  }
+  .mode b { display: block; color: var(--cream); }
+  .mode span { color: var(--muted); font-size: 0.92rem; }
+  a { color: var(--gold-soft); }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+    padding: 24px 16px 36px;
+    border-top: 1px solid rgba(212, 168, 62, 0.3);
+    margin-top: 32px;
+  }
+  footer nav { margin-bottom: 8px; }
+  footer nav a { margin: 0 10px; }
+  @media (max-width: 480px) {
+    .modes { grid-template-columns: 1fr; }
+    .panel { padding: 18px 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img class="logo" src="icon.png" width="128" height="128" alt="Dewveil Relic icon">
+    <h1>Dewveil Relic</h1>
+    <p class="tagline">Weave dew · Guide three · Seal on the beat</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>About the game</h2>
+      <p>You are the dew-vein keeper of a forgotten court. A living crown rests on a velvet cushion, a griffin perched on its peak. Weave veins of dew across the board and guide a <strong>firefly</strong>, a <strong>ladybug</strong> and a <strong>butterfly</strong> back to their gem seats, each walking only its own path.</p>
+      <p>Then seal the crown sequence on the beat: gems flare for only a moment, and a mistimed tap locks the seat.</p>
+      <div class="modes">
+        <div class="mode"><b>10 campaign courts</b><span>Hand-made puzzles with water, thorns, stone gates and pressure plates.</span></div>
+        <div class="mode"><b>Endless Night</b><span>Randomly woven nights with less dew and tighter beats.</span></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>How to play</h2>
+      <ul>
+        <li><strong>Swipe</strong> across adjacent tiles to lay a directed dew vein. The firefly and butterfly follow veins.</li>
+        <li><strong>Tap a lily</strong> to turn its flow and steer the ladybug, who only walks straight.</li>
+        <li><strong>Tap a gem pad</strong> above a column to spend 2 dew and pulse every envoy in that column one tile up.</li>
+        <li><strong>Seal on the beat:</strong> tap the correct seat while it glows. The wrong envoy bounces away.</li>
+        <li><strong>Griffin wind</strong> costs 3 dew and reverses every lily and vein for a few beats.</li>
+        <li>Fill the crown sequence in order to win. If a needed envoy is lost or the beats run out, the weave breaks.</li>
+      </ul>
+    </section>
+
+    <div class="cta">
+      <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.du23u3077548" rel="noopener">Get it on Google Play</a>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <nav>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="mailto:zecgroupllc@gmail.com">zecgroupllc@gmail.com</a>
+  </nav>
+  <div>© 2026 Dewveil Relic</div>
+</footer>
+</body>
+</html>
